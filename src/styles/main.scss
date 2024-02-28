@@ -1,0 +1,14 @@
+@import "./utils/breakpoints";
+@import './utils/mixins';
+@import './utils/variables';
+
+@import "./base/base";
+@import './base/typography';
+
+@import "./layout/header";
+@import './layout/footer';
+
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/rental";
+@import "./pages/error";
