@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1 {
+   @include font;
+   font-size: 48px;
+   font-weight: bold;
+}
+
+h2 {
+   @include font;
+}
+
+h3 {
+   @include font;
+}
+
+p {
+   @include font;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}

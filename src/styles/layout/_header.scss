@@ -1,0 +1,25 @@
+header {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding: 45px 0 50px 0;
+}
+
+.header-logo {
+   height: 68px;
+   width: 210px;
+}
+
+nav {
+   display: flex;
+   gap: 57px;
+   @include font;
+   font-size: 24px;
+   font-weight: 500;
+}
+
+.nav-active {
+   text-decoration-line: underline;
+   text-underline-offset: 5px;
+}

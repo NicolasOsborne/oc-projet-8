@@ -5,12 +5,22 @@ const Header = () => {
   return (
     <header>
       <Link to='/'>
-        <img src={Logo} alt='Logo de Kasa' />
+        <img className='header-logo' src={Logo} alt='Logo de Kasa' />
       </Link>
-      <div>
-        <NavLink to='/'>Accueil</NavLink>
-        <NavLink to='/about'>À Propos</NavLink>
-      </div>
+      <nav>
+        <NavLink
+          className={({ isActive }) => (isActive ? 'nav-active' : '')}
+          to='/'
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? 'nav-active' : '')}
+          to='/about'
+        >
+          À Propos
+        </NavLink>
+      </nav>
     </header>
   )
 }
