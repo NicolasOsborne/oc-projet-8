@@ -9,4 +9,11 @@
    gap: 50px;
    justify-content: center;
    align-items: center;
+
+   @include mobile {
+      background-color: $white;
+      padding: 0;
+      margin-bottom: 27px;
+      gap: 20px;
+   }
 }

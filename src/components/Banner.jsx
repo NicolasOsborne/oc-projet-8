@@ -10,7 +10,10 @@ const Banner = () => {
         alt="Bannière de la page d'accueil de Kasa"
       />
       <div className='banner-mask'>
-        <h1>Chez vous, partout et ailleurs</h1>
+        <h1>
+          Chez vous, <br className='banner-break' />
+          partout et ailleurs
+        </h1>
       </div>
     </div>
   )

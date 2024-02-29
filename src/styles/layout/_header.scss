@@ -4,11 +4,20 @@ header {
    align-items: center;
    justify-content: space-between;
    padding: 45px 0 50px 0;
+
+   @include mobile {
+      padding: 20px 0 27px 0;
+   }
 }
 
 .header-logo {
    height: 68px;
    width: 210px;
+
+   @include mobile {
+      height: 47px;
+      width: 145px;
+   }
 }
 
 nav {
@@ -17,6 +26,12 @@ nav {
    @include font;
    font-size: 24px;
    font-weight: 500;
+
+   @include mobile {
+      gap: 25px;
+      font-size: 12px;
+      text-transform: uppercase;
+   }
 }
 
 .nav-active {
