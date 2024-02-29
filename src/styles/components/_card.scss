@@ -1,0 +1,17 @@
+.rental-card {
+   height: 340px;
+   width: 340px;
+   border-radius: 10px;
+   background-color: $primary-color;
+   position: relative;
+
+
+   .rental-name {
+      color: $white;
+      font-size: 18px;
+      font-weight: 700;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+   }
+}
