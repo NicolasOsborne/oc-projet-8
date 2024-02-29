@@ -19,6 +19,7 @@ p {
 }
 
 a {
+   @include font;
    text-decoration: none;
    color: inherit;
 }
