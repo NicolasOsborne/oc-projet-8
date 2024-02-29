@@ -1,12 +1,16 @@
 .rental-card {
    height: 340px;
-   width: 340px;
+   width: 29%;
    border-radius: 10px;
    position: relative;
 
    @include mobile {
       height: 255px;
       width: 100%;
+   }
+
+   @include tablet {
+      width: 48%;
    }
 
    .rental-cover {
@@ -23,6 +27,7 @@
       position: absolute;
       bottom: 20px;
       left: 20px;
+      margin-right: 20px;
    }
 
    .rental-mask {

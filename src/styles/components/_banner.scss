@@ -48,6 +48,10 @@
          font-size: 24px;
          margin-left: 16px;
       }
+
+      @include tablet {
+         font-size: 32px;
+      }
    }
 
    .banner-break {
