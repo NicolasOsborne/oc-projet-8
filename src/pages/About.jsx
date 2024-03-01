@@ -11,10 +11,12 @@ function About() {
         bannerTitle1={''}
         bannerTitle2={''}
       />
-      <Collapse />
-      <Collapse />
-      <Collapse />
-      <Collapse />
+      <div className='collapse-container'>
+        <Collapse />
+        <Collapse />
+        <Collapse />
+        <Collapse />
+      </div>
     </>
   )
 }

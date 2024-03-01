@@ -1,0 +1,53 @@
+.collapse-menu {
+   width: 100%;
+
+   .collapse-menu-bar {
+      height: 52px;
+      background-color: $primary-color;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px 0 15px;
+      position: relative;
+      z-index: 1;
+
+
+      .collapse-menu-title {
+         font-size: 24px;
+         font-weight: bold;
+         color: $white;
+      }
+
+      .collapse-menu-chevron {
+         color: $white;
+         font-size: 24px;
+         cursor: pointer;
+         transition: transform 0.5s ease;
+
+         &.collapse-menu-chevron-dropdown {
+            transform: rotate(-180deg);
+         }
+      }
+   }
+
+   .collapse-menu-content {
+      font-size: 18px;
+      font-weight: 400;
+      background-color: $secondary-color;
+      border-radius: 0 0 5px 5px;
+      margin-top: -5px;
+      height: 0;
+      opacity: 0;
+      transform: translateY(-52px);
+      transition: all 0.5s ease-in-out, padding 0s;
+
+      &.collapse-menu-content-dropdown {
+         padding: 20px;
+         height: auto;
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+}
