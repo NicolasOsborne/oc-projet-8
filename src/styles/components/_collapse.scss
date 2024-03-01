@@ -13,11 +13,28 @@
       position: relative;
       z-index: 1;
 
+      @include mobile {
+         height: 30px;
+         padding: 0 10px 0 10px;
+      }
+
+      @include tablet {
+         height: 40px;
+      }
+
 
       .collapse-menu-title {
          font-size: 24px;
          font-weight: bold;
          color: $white;
+
+         @include mobile {
+            font-size: 13px;
+         }
+
+         @include tablet {
+            font-size: 20px;
+         }
       }
 
       .collapse-menu-chevron {
@@ -25,6 +42,14 @@
          font-size: 24px;
          cursor: pointer;
          transition: transform 0.5s ease;
+
+         @include mobile {
+            font-size: 13px;
+         }
+
+         @include tablet {
+            font-size: 20px;
+         }
 
          &.collapse-menu-chevron-dropdown {
             transform: rotate(-180deg);
@@ -42,6 +67,14 @@
       opacity: 0;
       transform: translateY(-52px);
       transition: all 0.5s ease-in-out, padding 0s;
+
+      @include mobile {
+         font-size: 12px;
+      }
+
+      @include tablet {
+         font-size: 16px;
+      }
 
       &.collapse-menu-content-dropdown {
          padding: 20px;
