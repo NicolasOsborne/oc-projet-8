@@ -11,9 +11,14 @@ function Home() {
         bannerAlt={"Bannière de la page d'accueil de Kasa"}
       />
 
-      <div className='rental-card-container'>
+      <div className='rentals-gallery'>
         {rentalsList.map((rental) => (
-          <Card key={rental.id} cover={rental.cover} title={rental.title} />
+          <Card
+            key={rental.id}
+            cover={rental.cover}
+            title={rental.title}
+            id={rental.id}
+          />
         ))}
       </div>
     </>

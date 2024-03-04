@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Collapse = ({ title, content }) => {
   const [isCollapsed, setIsCollapsed] = useState(true)
-  const handleCollapse = () => {
+  const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed)
   }
 
@@ -15,7 +15,7 @@ const Collapse = ({ title, content }) => {
           className={`fa-solid fa-chevron-up collapse-menu-chevron ${
             isCollapsed ? '' : 'collapse-menu-chevron-dropdown'
           }`}
-          onClick={handleCollapse}
+          onClick={toggleCollapse}
         />
       </div>
       <div

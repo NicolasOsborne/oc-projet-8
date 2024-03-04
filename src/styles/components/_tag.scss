@@ -1,0 +1,16 @@
+.tag-container {
+   background-color: $primary-color;
+   height: 25px;
+   border-radius: 10px;
+   padding: 3px 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .tag-content {
+      color: $white;
+      @include font;
+      font-size: 14px;
+      font-weight: bold;
+   }
+}
