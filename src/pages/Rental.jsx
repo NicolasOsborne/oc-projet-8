@@ -10,14 +10,6 @@ function Rental() {
   const { id } = useParams()
   const currentRental = rentalsList.find((rental) => rental.id === id)
 
-  // const [imagesCarousel, setImagesCarousel] = useState([])
-
-  // useEffect(() => {
-  //   if (currentRental) {
-  //     setImagesCarousel(currentRental.pictures)
-  //   }
-  // }, [currentRentalId, currentRental])
-
   return (
     <div className='rental-container'>
       <Carousel imagesCarousel={currentRental.pictures} />
@@ -38,7 +30,7 @@ function Rental() {
             <img className='host-picture' src={currentRental.host.picture} />
           </div>
           <div className='host-rating'>
-            <Rating />
+            <Rating rating={currentRental.rating} />
           </div>
         </div>
       </div>

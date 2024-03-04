@@ -1,13 +1,22 @@
-const Rating = () => {
+import PropTypes from 'prop-types'
+
+const Rating = ({ rating }) => {
+  const numberOfStars = parseInt(rating)
+
   return (
     <div className='rating-container'>
-      <i className='full-rating fa-solid fa-star'></i>
-      <i className='full-rating fa-solid fa-star'></i>
-      <i className='full-rating fa-solid fa-star'></i>
-      <i className='empty-rating fa-solid fa-star'></i>
-      <i className='empty-rating fa-solid fa-star'></i>
+      {[...Array(numberOfStars)].map((x, i) => (
+        <i key={i} className='full-rating fa-solid fa-star'></i>
+      ))}
+      {[...Array(5 - numberOfStars)].map((x, i) => (
+        <i key={i} className='empty-rating fa-solid fa-star'></i>
+      ))}
     </div>
   )
+}
+
+Rating.propTypes = {
+  rating: PropTypes.string.isRequired,
 }
 
 export default Rating

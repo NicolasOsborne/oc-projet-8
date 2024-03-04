@@ -3,22 +3,18 @@ import PropTypes from 'prop-types'
 
 const Carousel = ({ imagesCarousel }) => {
   // Définir l'index de l'image en cours
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   // Gestion des flèches Précédent / Suivant
   const previousSlide = () => {
-    setCurrentSlideIndex((currentSlideIndex) =>
-      currentSlideIndex === 0
-        ? imagesCarousel.length - 1
-        : currentSlideIndex - 1
+    setCurrentSlide((currentSlide) =>
+      currentSlide === 0 ? imagesCarousel.length - 1 : currentSlide - 1
     )
   }
 
   const nextSlide = () => {
-    setCurrentSlideIndex((currentSlideIndex) =>
-      currentSlideIndex === imagesCarousel.length - 1
-        ? 0
-        : currentSlideIndex + 1
+    setCurrentSlide((currentSlide) =>
+      currentSlide === imagesCarousel.length - 1 ? 0 : currentSlide + 1
     )
   }
 
@@ -27,16 +23,13 @@ const Carousel = ({ imagesCarousel }) => {
 
   return (
     <div className='carousel-container'>
-      <img
-        className='carousel-image'
-        src={imagesCarousel[currentSlideIndex]}
-      ></img>
+      <img className='carousel-image' src={imagesCarousel[currentSlide]}></img>
       {moreThanOneImage && (
         <>
-          <i className='fa-solid fa-chevron-left' onClick={previousSlide}></i>
-          <i className='fa-solid fa-chevron-right' onClick={nextSlide}></i>
+          <i className='fa-solid fa-chevron-left' onClick={previousSlide} />
+          <i className='fa-solid fa-chevron-right' onClick={nextSlide} />
           <p className='carousel-current-image'>
-            {currentSlideIndex + 1}/{imagesCarousel.length}
+            {currentSlide + 1}/{imagesCarousel.length}
           </p>
         </>
       )}
