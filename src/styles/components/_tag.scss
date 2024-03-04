@@ -7,10 +7,20 @@
    align-items: center;
    justify-content: center;
 
+   @include mobile {
+      height: 18px;
+      border-radius: 5px;
+      padding: 3px 20px;
+   }
+
    .tag-content {
       color: $white;
       @include font;
       font-size: 14px;
       font-weight: bold;
+
+      @include mobile {
+         font-size: 10px;
+      }
    }
 }

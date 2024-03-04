@@ -3,7 +3,23 @@
    flex-direction: row;
    gap: 10px;
 
+   @include mobile {
+      gap: 5px;
+   }
+
    .fa-star {
+      font-size: 24px;
+
+      @include mobile {
+         font-size: 13px;
+      }
+   }
+
+   .full-rating {
       color: $primary-color;
+   }
+
+   .empty-rating {
+      color: $third-color;
    }
 }

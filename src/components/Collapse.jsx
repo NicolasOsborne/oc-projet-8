@@ -23,7 +23,7 @@ const Collapse = ({ title, content }) => {
           isCollapsed ? '' : 'collapse-menu-content-dropdown'
         }`}
       >
-        <p>{content}</p>
+        {content}
       </div>
     </div>
   )
@@ -31,7 +31,7 @@ const Collapse = ({ title, content }) => {
 
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
 }
 
 export default Collapse

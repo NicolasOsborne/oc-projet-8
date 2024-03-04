@@ -4,11 +4,21 @@
    border-radius: 25px;
    position: relative;
 
+   @include mobile {
+      height: 255px;
+      border-radius: 10px;
+   }
+
    .carousel-image {
       width: 100%;
       height: 100%;
       border-radius: 25px;
       object-fit: cover;
+
+      @include mobile {
+         border-radius: 10px;
+
+      }
    }
 
    .fa-chevron-left {
@@ -18,6 +28,12 @@
       left: 23px;
       top: 168px;
       cursor: pointer;
+
+      @include mobile {
+         font-size: 20px;
+         top: 118px;
+         left: 6px;
+      }
    }
 
    .fa-chevron-right {
@@ -27,5 +43,26 @@
       right: 23px;
       top: 168px;
       cursor: pointer;
+
+      @include mobile {
+         font-size: 20px;
+         top: 118px;
+         right: 6px;
+      }
+   }
+
+   .carousel-current-image {
+      font-size: 18px;
+      font-weight: 500;
+      color: $white;
+      position: absolute;
+      bottom: 25px;
+      right: 49%;
+
+      @include mobile {
+         font-size: 13px;
+         bottom: 6px;
+         right: 46%;
+      }
    }
 }

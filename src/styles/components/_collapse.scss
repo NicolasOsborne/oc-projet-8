@@ -58,6 +58,7 @@
    }
 
    .collapse-menu-content {
+      @include font;
       font-size: 18px;
       font-weight: 400;
       background-color: $secondary-color;

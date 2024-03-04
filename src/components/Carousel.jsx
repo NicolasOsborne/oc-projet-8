@@ -6,6 +6,7 @@ const Carousel = () => {
       <img className='carousel-image' src={TestIllustration}></img>
       <i className='fa-solid fa-chevron-left'></i>
       <i className='fa-solid fa-chevron-right'></i>
+      <p className='carousel-current-image'>1/4</p>
     </div>
   )
 }
