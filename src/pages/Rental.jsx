@@ -4,7 +4,7 @@ import Rating from '../components/Rating'
 import Collapse from '../components/Collapse'
 import rentalsList from '../data/rentals.json'
 import { useParams } from 'react-router-dom'
-// import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Rental() {
   const { id } = useParams()
@@ -13,14 +13,14 @@ function Rental() {
   // const [imagesCarousel, setImagesCarousel] = useState([])
 
   // useEffect(() => {
-  //   if (rental) {
-  //     setImagesCarousel(rental.pictures)
+  //   if (currentRental) {
+  //     setImagesCarousel(currentRental.pictures)
   //   }
-  // }, [currentRentalId, rental])
+  // }, [currentRentalId, currentRental])
 
   return (
     <div className='rental-container'>
-      <Carousel />
+      <Carousel imagesCarousel={currentRental.pictures} />
       <div className='rental-information'>
         <div className='rental-name'>
           <h1 className='rental-title'>{currentRental.title}</h1>
