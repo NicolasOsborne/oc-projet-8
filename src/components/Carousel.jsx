@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 const Carousel = ({ imagesCarousel }) => {
@@ -19,12 +19,18 @@ const Carousel = ({ imagesCarousel }) => {
   }
 
   // Gestion de l'affichage des flèches de défilement et de l'indicateur de slides seulement s'il y a plus d'une image à affichage
-  const moreThanOneImage = imagesCarousel.length > 1
+  const [hasMoreThanOneImage, setHasMoreThanOneImage] = useState(false)
+
+  useEffect(() => {
+    if (imagesCarousel.length > 1) {
+      setHasMoreThanOneImage(true)
+    }
+  })
 
   return (
     <div className='carousel-container'>
       <img className='carousel-image' src={imagesCarousel[currentSlide]}></img>
-      {moreThanOneImage && (
+      {hasMoreThanOneImage && (
         <>
           <i className='fa-solid fa-chevron-left' onClick={previousSlide} />
           <i className='fa-solid fa-chevron-right' onClick={nextSlide} />

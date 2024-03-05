@@ -3,12 +3,26 @@ import Tag from '../components/Tag'
 import Rating from '../components/Rating'
 import Collapse from '../components/Collapse'
 import rentalsList from '../data/rentals.json'
-import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import Error from './Error'
 
 function Rental() {
   const { id } = useParams()
   const currentRental = rentalsList.find((rental) => rental.id === id)
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!currentRental) {
+      navigate('/error')
+      return
+    }
+  }, [currentRental])
+
+  if (!currentRental) {
+    return
+  }
 
   return (
     <div className='rental-container'>
