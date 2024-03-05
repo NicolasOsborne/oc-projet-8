@@ -5,11 +5,11 @@ const Rating = ({ rating }) => {
 
   return (
     <div className='rating-container'>
-      {[...Array(numberOfStars)].map((x, i) => (
-        <i key={i} className='full-rating fa-solid fa-star'></i>
+      {[...Array(numberOfStars)].map((star, index) => (
+        <i key={index} className='full-rating fa-solid fa-star' />
       ))}
-      {[...Array(5 - numberOfStars)].map((x, i) => (
-        <i key={i} className='empty-rating fa-solid fa-star'></i>
+      {[...Array(5 - numberOfStars)].map((star, index) => (
+        <i key={index} className='empty-rating fa-solid fa-star' />
       ))}
     </div>
   )
