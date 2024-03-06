@@ -1,6 +1,9 @@
 .rental-card-link {
    height: 340px;
    width: 29%;
+   border-radius: 10px;
+   overflow: hidden;
+
 
    @include mobile {
       height: 255px;
@@ -26,6 +29,8 @@
          width: 100%;
          border-radius: 10px;
          object-fit: cover;
+         transform: scale(1);
+         transition: transform 0.5s ease-in-out;
       }
 
       .rental-card-title {
@@ -45,6 +50,12 @@
          position: absolute;
          top: 0;
          border-radius: 10px;
+      }
+   }
+
+   &:hover {
+      .rental-card-cover {
+         transform: scale(1.03);
       }
    }
 }
