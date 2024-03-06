@@ -29,7 +29,7 @@ const Carousel = ({ imagesCarousel }) => {
 
   return (
     <div className='carousel-container'>
-      <img className='carousel-image' src={imagesCarousel[currentSlide]}></img>
+      <img className='carousel-image' src={imagesCarousel[currentSlide]} />
       {hasMoreThanOneImage && (
         <>
           <i className='fa-solid fa-chevron-left' onClick={previousSlide} />

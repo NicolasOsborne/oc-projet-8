@@ -63,10 +63,12 @@
       background-color: $secondary-color;
       border-radius: 0 0 5px 5px;
       margin-top: -5px;
-      height: 0;
+      padding: 0 20px;
+      max-height: 0;
       opacity: 0;
-      transform: translateY(-52px);
-      transition: all 0.5s ease-in-out, padding 0s;
+      visibility: hidden;
+      transform: translateY(-50px);
+      transition: all 0.5s ease-in-out;
 
       @include mobile {
          font-size: 12px;
@@ -77,10 +79,12 @@
       }
 
       &.collapse-menu-content-dropdown {
-         padding: 20px;
-         height: auto;
+         max-height: 500px;
          opacity: 1;
+         visibility: visible;
          transform: translateY(0);
+         padding: 20px;
+
       }
    }
 }

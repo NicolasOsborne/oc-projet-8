@@ -5,7 +5,6 @@ import Collapse from '../components/Collapse'
 import rentalsList from '../data/rentals.json'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import Error from './Error'
 
 function Rental() {
   const { id } = useParams()
