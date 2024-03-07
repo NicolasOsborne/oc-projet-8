@@ -1,0 +1,63 @@
+// Cards de la page Home
+
+.rental-card-link {
+   height: 340px;
+   width: 29%;
+   border-radius: 10px;
+   overflow: hidden;
+
+
+   @include mobile {
+      height: 255px;
+      width: 100%;
+   }
+
+   @include tablet {
+      width: 48%;
+   }
+
+   .rental-card {
+      height: 340px;
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+
+      @include mobile {
+         height: 255px;
+      }
+
+      .rental-card-cover {
+         height: 100%;
+         width: 100%;
+         border-radius: 10px;
+         object-fit: cover;
+         transform: scale(1);
+         transition: transform 0.5s ease-in-out;
+      }
+
+      .rental-card-title {
+         color: $white;
+         font-size: 18px;
+         font-weight: 700;
+         position: absolute;
+         bottom: 20px;
+         left: 20px;
+         margin-right: 20px;
+      }
+
+      .rental-card-mask {
+         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.5) 80%, rgba(0, 0, 0, 0.6) 100%);
+         height: 100%;
+         width: 100%;
+         position: absolute;
+         top: 0;
+         border-radius: 10px;
+      }
+   }
+
+   &:hover {
+      .rental-card-cover {
+         transform: scale(1.03);
+      }
+   }
+}

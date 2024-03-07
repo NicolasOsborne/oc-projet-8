@@ -1,0 +1,150 @@
+// Page location - Rental
+
+.rental-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin: 30px 0 50px 0;
+
+   @include mobile {
+      margin: 0 0 27px 0;
+   }
+
+   .rental-information {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 30px 0 24px 0;
+
+      @include mobile {
+         flex-direction: column;
+         margin: 15px 0 0 0;
+         gap: 16px;
+      }
+
+      @include tablet {
+         flex-direction: column;
+         gap: 24px;
+      }
+
+      .rental-name {
+         display: flex;
+         flex-direction: column;
+
+         .rental-title {
+            font-size: 36px;
+            font-weight: 500;
+            color: $primary-color;
+            margin-bottom: 5px;
+
+            @include mobile {
+               font-size: 18px;
+               margin-bottom: 7px;
+            }
+         }
+
+         .rental-location {
+            font-size: 18px;
+            font-weight: 500;
+
+            @include mobile {
+               font-size: 14px;
+            }
+         }
+
+         .tags-container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 20px;
+
+            @include mobile {
+               margin-top: 10px;
+               flex-wrap: wrap;
+            }
+         }
+      }
+
+      .host-information {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: flex-end;
+
+         @include mobile {
+            flex-direction: row-reverse;
+            margin-bottom: 13px;
+         }
+
+         @include tablet {
+            flex-direction: row-reverse;
+         }
+
+         .host-profile {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+
+            .host-name {
+               font-size: 18px;
+               font-weight: 500;
+               color: $primary-color;
+               text-align: right;
+               width: 150px;
+               word-spacing: 100vw;
+
+               @include mobile {
+                  font-size: 12px;
+               }
+
+               @media only screen and (max-width: 350px) {
+                  width: 50px;
+               }
+            }
+
+            .host-picture {
+               width: 64px;
+               height: 64px;
+               border-radius: 50%;
+               object-fit: cover;
+               object-position: center;
+
+               @include mobile {
+                  width: 32px;
+                  height: 32px;
+               }
+            }
+         }
+
+         .host-rating {
+            padding-bottom: 13px;
+
+            @include mobile {
+               padding-bottom: 7px;
+            }
+         }
+      }
+   }
+
+   .rental-description-equipments {
+      display: flex;
+      flex-direction: row;
+      gap: 76px;
+
+      @include mobile {
+         flex-direction: column;
+         gap: 20px;
+      }
+
+      @include tablet {
+         flex-direction: column;
+         gap: 40px;
+      }
+
+      .equipments-list {
+         list-style-type: none;
+         padding: 0;
+      }
+   }
+}

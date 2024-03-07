@@ -1,0 +1,20 @@
+@import "./utils/breakpoints";
+@import './utils/variables';
+
+@import "./base/base";
+@import './base/typography';
+
+@import "./layout/header";
+@import './layout/footer';
+
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/rental";
+@import "./pages/error";
+
+@import './components/banner';
+@import "./components/card";
+@import "./components/collapse";
+@import "./components/carousel";
+@import "./components/rating";
+@import "./components/tag";

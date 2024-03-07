@@ -1,0 +1,14 @@
+// Mise en page globale
+
+* {
+   margin: 0;
+}
+
+
+body {
+   padding: 0 100px;
+
+   @include mobile {
+      padding: 0 20px;
+   }
+}

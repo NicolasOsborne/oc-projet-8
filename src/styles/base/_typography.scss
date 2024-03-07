@@ -1,0 +1,21 @@
+// Gestion des fonts 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin font {
+   font-family: 'Montserrat', sans-serif;
+}
+
+body {
+   @include font;
+}
+
+h1 {
+   font-size: 48px;
+   font-weight: bold;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
