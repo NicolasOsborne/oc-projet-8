@@ -17,6 +17,7 @@ const Card = ({ cover, title, id }) => {
   )
 }
 
+// Définition des PropTypes des props cover, title et id qui doivent être des strings
 Card.propTypes = {
   cover: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

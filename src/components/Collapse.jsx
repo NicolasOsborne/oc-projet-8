@@ -2,7 +2,10 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 
 const Collapse = ({ title, content }) => {
+  // Déclaration de la state variable isCollapsed, qui déterminera, en fonction de son state, si l'élément Collapse est caché (true) ou déroulé (false). Il est par défaut caché au chargement de la page.
   const [isCollapsed, setIsCollapsed] = useState(true)
+
+  // Gestion du changement de state du component Collapse, en inversant le state de isCollapsed (true -> false et false -> true)
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed)
   }
@@ -29,6 +32,7 @@ const Collapse = ({ title, content }) => {
   )
 }
 
+// Définition des PropTypes des props title et cover
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,

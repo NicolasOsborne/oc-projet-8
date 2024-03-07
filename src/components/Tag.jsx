@@ -8,6 +8,7 @@ const Tag = ({ tag }) => {
   )
 }
 
+// Définition des PropTypes du props tag
 Tag.propTypes = {
   tag: PropTypes.string,
 }
