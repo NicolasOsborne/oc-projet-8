@@ -1,4 +1,4 @@
-!(/src/assets/kasa-logo.png)
+![Logo de Kasa](./src/assets/kasa-logo.png)
 
 # Projet 8 - Formation OpenClassrooms - Kasa
 
