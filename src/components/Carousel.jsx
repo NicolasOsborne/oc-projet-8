@@ -37,11 +37,11 @@ const Carousel = ({ imagesCarousel }) => {
         <>
           <i className='fa-solid fa-chevron-left' onClick={previousSlide} />
           <i className='fa-solid fa-chevron-right' onClick={nextSlide} />
+          <p className='carousel-current-image'>
+            {currentSlide + 1}/{imagesCarousel.length}
+          </p>
         </>
       )}
-      <p className='carousel-current-image'>
-        {currentSlide + 1}/{imagesCarousel.length}
-      </p>
     </div>
   )
 }
